@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Libyan Cultural Investigation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Custom Color Scheme */
+    :root {
+      --light-brown: #A78B71;
+      --cream: #FFF8F0;
+      --sand: #F4E9DD;
+      --soft-brown: #8B735B;
+      --text-brown: #5E4E3E;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Merriweather', serif;
+      background-color: var(--cream);
+      color: var(--text-brown);
+      line-height: 1.7;
+      padding-top: 80px;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      color: var(--soft-brown);
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      text-align: center;
+      padding: 30px;
+      margin: 40px 0;
+      background-color: var(--sand);
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      border: 2px solid var(--light-brown);
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin: 2.5rem 0 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 3px solid var(--light-brown);
+    }
+
+    h3 {
+      font-size: 1.6rem;
+      color: var(--soft-brown);
+      margin: 2rem 0 1rem;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    section {
+      padding: 30px;
+      margin: 40px 0;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    .figure {
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .figure img {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 3px solid var(--sand);
+    }
+
+    .figure figcaption {
+      font-style: italic;
+      color: var(--soft-brown);
+      margin-top: 1rem;
+      font-size: 0.95rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2.5rem 0;
+      background-color: white;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 2px solid var(--sand);
+    }
+
+    th {
+      background-color: var(--light-brown);
+      color: white;
+      font-weight: 600;
+    }
+
+    tr:nth-child(even) {
+      background-color: var(--sand);
+    }
+
+    footer {
+      background-color: var(--light-brown);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+      border-radius: 10px;
+    }
+
+    footer a {
+      color: var(--sand);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* Navigation Menu */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: var(--cream);
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--soft-brown);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+    }
+
+    .nav-links a:hover {
+      background-color: var(--light-brown);
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 1rem;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        flex-direction: column;
+        background: var(--cream);
+        width: 70%;
+        height: calc(100vh - 60px);
+        padding: 2rem;
+        transition: right 0.3s ease;
+        box-shadow: -2px 0 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav-links.active {
+        right: 0;
+      }
+
+      .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: var(--soft-brown);
+        cursor: pointer;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Navigation Menu -->
+  <nav class="navbar">
+    <span class="logo" style="font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--soft-brown);">
+      Libyan Culture
+    </span>
+    <ul class="nav-links">
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#components">Components</a></li>
+      <li><a href="#comparison">Comparison</a></li>
+      <li><a href="#interaction">Interaction</a></li>
+    </ul>
+    <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+  </nav>
+
+  <div class="container">
+    <!-- All Original Content Preserved -->
+    <h1>Libyan Cultural Investigation</h1>
+
+    <section id="introduction">
+      <h2>Introduction</h2>
+      <figure class="figure">
+        <img src="Geo of Libya.jpg" alt="Geographic regions of Libya">
+        <figcaption>Figure 1. Geographic regions of Libya. Adapted from UNESCO World Heritage Sites.</figcaption>
+      </figure>
+      <p>Libya is a North African country with a rich cultural heritage shaped by indigenous Berber traditions, Arab influence, and its Mediterranean proximity. It lies along the southern coast of the Mediterranean Sea, bordered by Egypt, Sudan, Chad, Niger, Algeria, and Tunisia. Libya’s culture is deeply rooted in Islamic traditions, tribal values, and a mix of urban and rural lifestyles. The capital city, Tripoli, and the historic city of Benghazi are major cultural hubs.</p>
+    </section>
+
+    <!-- All Cultural Components Subsections Preserved -->
+    <section id="components">
+      <h2>Cultural Components</h2>
+      <figure class="figure">
+        <img src="Libya - pottery.jpg" alt="Traditional Libyan pottery and textiles">
+        <figcaption>Figure 2. Traditional Libyan pottery and textiles. Image from Libyan Cultural Archive.</figcaption>
+      </figure>
+      
+      <h3>Art and Entertainment</h3>
+      <p>Libyan art is a blend of Berber, Islamic, and Mediterranean influences. Traditional crafts include carpet weaving, embroidery, pottery, and metalwork. Music plays a major role in Libyan life, with popular instruments like the oud and darbuka. Folk music and oral storytelling remain important, especially during weddings and festivals, keeping cultural traditions alive through sound and narrative.</p>
+      
+      <h3>Language</h3>
+      <p>Arabic is the official language, with Libyan Arabic being the most commonly spoken dialect. Berber languages are also present, especially in the Nafusa Mountains and southern parts of the country. Due to past colonization and modern global connections, Italian and English are understood in some urban areas, especially among older generations and professionals.</p>
+
+      <h3>Social Values and Norms</h3>
+      <p>Family and tribe form the backbone of Libyan identity. Respect for elders, hospitality, and personal and family honor are key values passed down through generations. Public behavior tends to be conservative, and modesty is important in both clothing and interactions. Community relationships and Islamic values influence most daily practices.</p>
+
+      <h3>Religious Beliefs</h3>
+      <p>Islam is the dominant religion in Libya, with nearly all Libyans identifying as Sunni Muslims. Religion strongly influences law, education, and everyday life. Daily prayers, fasting during Ramadan, and Quranic teachings are central practices that guide moral and social conduct.</p>
+
+      <h3>Rites of Passage</h3>
+      <p>Major rites of passage include birth celebrations, circumcision for boys, religious schooling milestones, and elaborate wedding ceremonies. Funerals involve community mourning and group prayers. These events are not only religious but also deeply cultural, reinforcing community bonds and traditional values.</p>
+
+      <h3>Gender Norms and Roles</h3>
+      <p>Libyan society has traditionally been patriarchal. Men are seen as providers and protectors, while women are often the caretakers of the home. However, in recent decades, especially in urban areas, women have gained more access to education and professional roles. While change is happening, traditional gender expectations still shape many aspects of daily life.</p>
+
+      <h3>Kinship Systems</h3>
+      <p>Kinship in Libya is patrilineal and strongly tribal. Extended families often live near one another, and major decisions are usually made by male elders. Tribal identity can influence marriage decisions, social rank, and even how disputes are resolved. This deep-rooted system fosters loyalty but can also present challenges in modern legal and social contexts.</p>
+
+      <h3>Marriage Traditions</h3>
+      <p>Marriage is one of the most important social events in Libyan life. It is often arranged and involves several days of celebration. Customs include dowry negotiations, henna ceremonies for the bride, and traditional music and feasting. The process reflects Islamic values and tribal customs, emphasizing family honor, unity, and continuity of cultural practices.</p>
+
+      <h3>Socialization</h3>
+      <p>In Libyan culture, traditions around marriage and family life are passed down through daily life, observation, and community involvement. Young people learn what is expected of them by participating in weddings, religious celebrations, and family events. Girls are often taught household skills and cultural expectations by older women, while boys learn their roles through guidance from male relatives and community elders.</p>
+    </section>
+    
+    <section id="comparison">
+        <h2>Comparison with Canadian Culture</h2>
+        <figure class="figure">
+          <img src="traditional wedding - rifel.jpg" alt="Cultural comparison of wedding traditions">
+          <figcaption>Figure 3. Cultural comparison of wedding traditions. Data from UNDP (2022).</figcaption>
+        </figure>
+        <p>Weddings in Libya and Canada differ greatly in structure and meaning. Libyan weddings tend to be multi-day events rooted in religious tradition, community involvement, and family honor. Arranged elements and tribal customs are common. In contrast, Canadian weddings often reflect personal choice, sometimes blending secular and religious aspects. They typically last one day and are more focused on individual expression and the couple’s unique story. Despite these differences, both cultures view marriage as a meaningful milestone celebrated with loved ones.</p>
+        
+      <table>
+        <thead>
+          <tr>
+            <th>Aspect</th>
+            <th>Libya</th>
+            <th>Canada</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Duration</td>
+            <td>Multi-day</td>
+            <td>Single day</td>
+          </tr>
+          <tr>
+            <td>Focus</td>
+            <td>Community</td>
+            <td>Individual</td>
+          </tr>
+          <tr>
+            <td>Customs</td>
+            <td>Tribal</td>
+            <td>Personal</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="interaction">
+      <h2>Interaction with Other Cultures</h2>
+      <figure class="figure">
+        <img src="Mediterranean cultures.jpg" alt="Libya interacting with Mediterranean cultures">
+        <figcaption>Figure 4. Libya's interaction with Mediterranean cultures. Image sourced from the Libyan Ministry of Culture.</figcaption>
+      </figure>
+      <p>Libya's interactions with Mediterranean cultures have been long-standing, particularly with Italy, Greece, and Egypt. These interactions have influenced Libyan art, language, and food. For example, Italian colonization left a lasting impact on architecture and certain culinary traditions, like pasta dishes and coffee. While Islamic and Arabic culture remains dominant, there is a visible Mediterranean influence in the urban centers of Tripoli and Benghazi. These cultural exchanges have enriched Libya’s cultural fabric, blending traditional practices with newer influences from Europe and neighboring Arab states.</p>
+    </section>
+
+      <!-- All other subsections remain exactly as you wrote them -->
+      
+    </section>
+
+    <!-- Comparison and Interaction Sections Preserved -->
+
+    <footer>
+      <p>Libyan Cultural Investigation Project - 2025 | <a href="https://libyanculturalinvestigation.com">Visit our website for more information</a></p>
+    </footer>
+  </div>
+
+  <script>
+    // Menu Toggle Script
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Smooth Scroll Script
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+        if (window.innerWidth <= 768) {
+          navLinks.classList.remove('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
